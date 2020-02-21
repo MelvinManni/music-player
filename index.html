@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MP3 PLAYER</title>
+</head>
+<body>
+    <div class="container">
+        <div class="flex row">
+            <div class="col menu" id="menu">
+                <button class="play-btn" id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="cont-menu " id="cont-menu">
+                    <div class="cont-menu-2">
+                        <button class="play-btn" id="close">
+                            <i class="far fa-window-close"></i>
+                        </button>
+                        <div>
+                            <h3 class="name-logo">
+                                Music Player
+                            </h3>
+                        </div>
+                        <div class="seperate mt-0">
+                            <button class="btn">
+                                <i class="fab fa-wpexplorer"></i> Explore
+                            </button>
+                        </div>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-bullhorn"></i> Suggested
+                        </h3>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-chart-line"></i> Top Charts
+                        </h3>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-music"></i> New stuff
+                        </h3>
+                        
+                        <h3 class=" name-logo">Popular</h3>
+                        
+                        <h3 class="seperate mt-0">
+                            <i class="fas fa-heart"></i> Favourite
+                        </h3>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-compact-disc"></i> Albums
+                        </h3>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-list"></i> Playlists
+                        </h3>
+                        
+                        <h3 class="seperate">
+                            <i class="fas fa-poll-h"></i> Genres
+                        </h3>
+                        
+                        <h3 class="create-pl">
+                            <i class="fas fa-plus-square"></i> Create Playlists
+                        </h3>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="col other-col">
+
+                <p>Made By <a href="http://melvinmanni.github.io" target="_blank" rel="noopener noreferrer"> Melvin_manni <i
+                        class="fas fa-link"></i></a></p>
+
+                <h2 class="title seperate">
+                    Explore Music
+                </h2>
+
+                <div class="flex row space-between seperate" id="explore">
+                    
+                </div>
+
+                <div class="flex row w100 space-between pop">
+                    <div class="col w70 " id="popular">
+                        <div class="title seperate">
+                            Popular
+                        </div>
+
+                    </div>
+
+                    <div class="col w30 mooder">
+                        <h1 class="title seperate">
+                            Mood
+                        </h1>
+                        <div class="flex row">
+                            <div class="card">
+                                <p class="mood">
+                                    Ghetto Rap
+                                </p>
+                            </div>
+
+                            <div class="card">
+                                <p class="mood">
+                                    Twerk Baby
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex row">
+                            <div class="card">
+                                <p class="mood">
+                                    Part Breaker
+                                </p>
+                            </div>
+                        
+                            <div class="card">
+                                <p class="mood">
+                                    Valentine Vibe
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="now-playing">
+            
+            <div class="play-btns">
+                <button class="play-btn" id="prev">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                
+                <button class="play-btn" id="play">
+                    <i id="icon-playPause" class="fas fa-play"></i>
+                </button>
+                
+                <button class="play-btn" id="pause">
+                    <i id="icon-playPause" class="fas fa-pause"></i>
+                </button>
+                
+                <button class="play-btn" id="next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+
+            <div class="push"></div>
+            
+            <div class="play-title">
+                <img src="" alt="" class="margin" id="thumb-play">
+                <div class="t-sect ">
+                    <p id="play-title">
+                
+                    </p>
+                
+                    <p id="play-artist">
+                
+                    </p>
+                </div>
+            </div>
+            <div class="progress" id="progress">
+                <div class="progress-bar" role="progressbar" id="progress-bar"></div>
+            </div>
+
+            <audio id="audio" ontimeupdate="progressCheck()" controls>
+                <source id="mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+
+
+
+
+<!---JS Links-->
+
+    <script src="src/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+</body>
+</html>
