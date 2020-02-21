@@ -360,4 +360,8 @@ a{
     close:active{
         background-color: transparent;
     }
+
+    .other-col{
+        margin-left:40px;
+    }
 }
