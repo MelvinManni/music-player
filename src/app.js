@@ -8,32 +8,7 @@ let progress = document.getElementById("progress"),
     playThumb = document.getElementById("thumb-play"),
     progressBar = document.getElementById("progress-bar"),
     aud = document.getElementById("audio");
-let openBtn = document.getElementById("open"),
-    closeBtn = document.getElementById("close"),
-    menu = document.getElementById("menu"),
-    contMenu = document.getElementById("cont-menu"),
-    contMenu2 = document.getElementById("cont-menu-2");
 
-
-openBtn.addEventListener("click", () => {
-    menu.style.width = "180px";
-    openBtn.style.display = 'none';
-    setInterval(() => {
-        contMenu.style.display = 'block';
-    }, 800)
-});
-
-
-closeBtn.addEventListener("click", () => {
-
-    contMenu.style.visibility = 'collapse';
-
-    setInterval(() => {
-        menu.style.width = "0px";
-        openBtn.style.display = 'block';
-    }, 500)
-
-});
 
 let index = 0;
 
