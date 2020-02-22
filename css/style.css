@@ -12,6 +12,7 @@ body{
     background-color: black;
     color: rgb(73, 72, 72);
     font-size: 12px;
+    transition: ease;
 }
 
 .container{
@@ -364,7 +365,7 @@ a{
         flex-direction: row;
         margin: 5px 0;
         justify-content: center;
-        padding-left: 90px;
+        padding-left: 40px;
     }
 
     .play-btns{
