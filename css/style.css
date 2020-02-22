@@ -114,7 +114,7 @@ body{
 
 #close{
     position: relative;
-    padding-left: 140px;
+    padding-left: 130px;
 }
 .title{
     color: white;
@@ -180,8 +180,8 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
 }
+
 
 .play-btn{
     background-color: transparent;
@@ -302,6 +302,10 @@ a{
     flex-direction: row;
 }
 
+
+.Pop{
+    margin-bottom: 70px;
+}
 @media all and (max-width: 769px){
 
     .menu{
@@ -379,7 +383,7 @@ a{
     }
 
     #open{
-        margin-left:3px;
+        margin-left:0px;
     }
 
     #open, #close{
@@ -395,8 +399,13 @@ a{
     }
 
     .other-col{
-        margin-left:40px;
+        margin-left:50px;
     }
 
+    
+    .pop{
+        margin-bottom:100px ;
+    }
 
 }
+
