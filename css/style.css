@@ -31,6 +31,19 @@ body{
     flex-direction: row;
 }
 
+.new-time{
+ margin: 0 15px;
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 390px;
+    min-width: 200px;
+}
+
 .space-between{
     display: flex;
     justify-content: space-between;
@@ -56,6 +69,12 @@ body{
     margin-left: 8px;
     z-index: 10;
     padding-top: 10px;
+}
+
+.new-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #open, #close{
@@ -293,6 +312,7 @@ a{
     }
 
     .cont-menu{
+        top: 10px;
         visibility: collapse;
         transition: 0.4s ease-in;
     }
@@ -362,6 +382,10 @@ a{
 
     #open, #close{
         display: block;
+    }
+
+    #open i, #close i{
+        font-size: 26px;
     }
 
     close:active{

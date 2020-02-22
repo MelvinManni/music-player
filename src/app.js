@@ -21,7 +21,6 @@ playartist.innerHTML = song[index].artist;
 playThumb.src = song[index].thumb;
 aud.src = song[index].song;
 
-
 for (let i = 0; i < song.length; i++) {
 
     const div = document.createElement("div");
@@ -203,3 +202,54 @@ aud.addEventListener("timeupdate", () => {
 
 
 
+aud.addEventListener("timeupdate", (e)=>{
+    var timer = document.getElementById("time");
+
+    let sec = Math.floor(aud.currentTime % 60),
+        min = Math.floor(aud.currentTime/60);
+    
+    if (sec < 10){
+        sec = "0" + Math.floor(aud.currentTime % 60);
+    }
+
+    let time = min + ":" + sec;
+    timer.innerHTML = time;
+
+    e.preventDefault
+})
+
+
+aud.addEventListener("timeupdate", (e)=>{
+    var timer2 = document.getElementById("time2");
+    let length = aud.duration;
+
+    let lsec = Math.floor(length % 60),
+        lmin = Math.floor(length / 60);
+
+    if (lsec < 10) {
+        lsec = "0" + Math.floor(length % 60);
+    }
+
+    const x = parseInt(lmin),
+        y = parseInt(lsec);
+
+    let duration = x + ":" + y;
+
+    if(aud.currentTime == 0){
+        timer2.innerHTML = "0:00"
+    } else{
+        timer2.innerHTML = duration;
+    }
+
+    e.preventDefault
+})
+
+
+//Make clickable
+
+
+progress.addEventListener("mousedown", (e)=>{
+
+    let clickedPosition = e.clientX - e.target.offsetLeft;
+    aud.currentTime = (clickedPosition/e.target.offsetWidth)*aud.duration;
+});
